@@ -56,5 +56,7 @@ $prev = new DateTime('2000-1-1');
 echo $prev->diff($now)->format('%a')
 ```
 
-- 1.PHPマニュアルのDocumentationからSearchで「format」と検索する。
-  2.formatのページにある戻り値を確認する。
+- 1.PHPマニュアルのDocumentationからSearchで「DateTime」と検索する。
+  2.DateTimeのクラス概要のメソッドにある「diff」を選んでページに移動する。
+  3️.diffページの下部参考から「Dateinterval::format()」のページに移動する。
+  4.DateInterval::formatページの戻り値を確認する。

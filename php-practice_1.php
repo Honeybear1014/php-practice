@@ -62,7 +62,15 @@ echo $message;
 
 <?php
 
-$prefectures = ['東京都','神奈川県','埼玉県','栃木県','千葉県','群馬県','茨城県'];
+$prefectures = [
+    '東京都',
+    '神奈川県',
+    '埼玉県',
+    '栃木県',
+    '千葉県',
+    '群馬県',
+    '茨城県'
+];
 
 echo $prefectures[3] . 'と' . $prefectures[4] . 'は関東地方の都道府県です。';
 
@@ -72,21 +80,21 @@ echo $prefectures[3] . 'と' . $prefectures[4] . 'は関東地方の都道府県
 
 <?php
 
-$prefectures = ['東京都' => '新宿区','神奈川県' => '横浜市','埼玉県' => 'さいたま市','栃木県' => '宇都宮市','千葉県' => '千葉市','群馬県' => '前橋市','茨城県' => '水戸市'];
+$prefectures = [
+    '東京都' => '新宿区',
+    '神奈川県' => '横浜市',
+    '埼玉県' => 'さいたま市',
+    '栃木県' => '宇都宮市',
+    '千葉県' => '千葉市',
+    '群馬県' => '前橋市',
+    '茨城県' => '水戸市'
+];
 
-echo $prefectures['東京都'] . "\n";
-
-echo $prefectures['神奈川県'] . "\n";
-
-echo $prefectures['千葉県'] . "\n";
-
-echo $prefectures['埼玉県'] . "\n";
-
-echo $prefectures['栃木県'] . "\n";
-
-echo $prefectures['群馬県'] . "\n";
-
-echo $prefectures['茨城県'] . "\n";
+foreach ($prefectures as $prefecture => $location) {
+    
+    echo $location . "\n";
+    
+}
 
 ?>
 
@@ -94,7 +102,15 @@ echo $prefectures['茨城県'] . "\n";
 
 <?php
 
-$location = ['東京都' => '新宿区','神奈川県' => '横浜市','埼玉県' => 'さいたま市','栃木県' => '宇都宮市','千葉県' => '千葉市','群馬県' => '前橋市','茨城県' => '水戸市'];
+$location = [
+    '東京都' => '新宿区',
+    '神奈川県' => '横浜市',
+    '埼玉県' => 'さいたま市',
+    '栃木県' => '宇都宮市',
+    '千葉県' => '千葉市',
+    '群馬県' => '前橋市',
+    '茨城県' => '水戸市'
+    ];
 
 foreach ($location as $key => $value) {
  
@@ -102,6 +118,7 @@ foreach ($location as $key => $value) {
     
     echo $key . 'の県庁所在地は、' . $value . 'です。';
     
+    break;
  }
 }
 
@@ -111,7 +128,17 @@ foreach ($location as $key => $value) {
 
 <?php
 
-$location = ['東京都' => '新宿区','神奈川県' => '横浜市','埼玉県' => 'さいたま市','栃木県' => '宇都宮市','千葉県' => '千葉市','群馬県' => '前橋市','茨城県' => '水戸市','愛知県' => '名古屋市','大阪府' => '大阪市'];
+$location = [
+    '東京都' => '新宿区',
+    '神奈川県' => '横浜市',
+    '埼玉県' => 'さいたま市',
+    '栃木県' => '宇都宮市',
+    '千葉県' => '千葉市',
+    '群馬県' => '前橋市',
+    '茨城県' => '水戸市',
+    '愛知県' => '名古屋市',
+    '大阪府' => '大阪市'
+    ];
 
 foreach ($location as $key => $value) {
     
@@ -135,13 +162,14 @@ foreach ($location as $key => $value) {
 
 function hello($name) {
     
-    echo $name . 'さん、こんにちは。' . "\n";
+    return $name . 'さん、こんにちは。' . "\n";
     
 }
 
-hello('鈴木');
+echo hello('鈴木');
 
-hello('町田');
+echo hello('町田');
+
 
 ?>
 
@@ -151,9 +179,9 @@ hello('町田');
 
 $price = 1000;
 
-function calcTaxInPrice($price) {
+function calcTaxInPrice($taxnotincluded) {
     
-    return $price + $price * 0.1;
+    return $taxnotincluded + $taxnotincluded * 0.1;
     
 }
 
@@ -171,18 +199,18 @@ function distinguishNum($num) {
     
     if ($num % 2 == 0) {
         
-        echo $num . 'は偶数です。' . "\n";
+        return $num . 'は偶数です。' . "\n";
         
     } else {
         
-        echo $num . 'は奇数です。' . "\n";
+        return $num . 'は奇数です。' . "\n";
     }
     
 }
 
-distinguishNum(11);
+echo distinguishNum(11);
 
-distinguishNum(24);
+echo distinguishNum(24);
 
 ?>
 
@@ -195,39 +223,39 @@ function evaluateGrade($grade) {
     switch ($grade) {
         case 'A':
             
-            echo '合格です。' . "\n";
+            return '合格です。' . "\n";
             
             break;
             
         case 'B':
             
-            echo '合格です。' . "\n";
+            return '合格です。' . "\n";
         
             break;
             
         case 'C':
             
-            echo '合格ですが追加課題があります。' . "\n";
+            return '合格ですが追加課題があります。' . "\n";
             
             break;
             
         case 'D':
             
-            echo '不合格です。' . "\n";
+            return '不合格です。' . "\n";
             
             break;
             
         default:
             
-            echo '判定不明です。講師に問い合わせてください。' . "\n";
+            return '判定不明です。講師に問い合わせてください。' . "\n";
             
             break;
     }
     
 }
 
-evaluateGrade('A');
+echo evaluateGrade('A');
 
-evaluateGrade('G');
+echo evaluateGrade('G');
 
 ?>

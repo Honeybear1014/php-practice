@@ -142,7 +142,7 @@ class Student{
 
 $yamada = new Student('999','山田');
 
-    echo '学籍番号' . $yamada -> studentId . '番の生徒は' . $yamada -> studentName . 'です。'
+    echo '学籍番号' . $yamada->studentId . '番の生徒は' . $yamada->studentName . 'です。'
 
 ?>
 
@@ -163,13 +163,13 @@ class Student{
 
     public function attend($curriculum)
     {
-        echo $this -> studentName. 'は' . $curriculum . 'の授業に出席しました。学籍番号：' . $this -> studentId;
+        echo $this->studentName. 'は' . $curriculum . 'の授業に出席しました。学籍番号：' . $this->studentId;
     }
 }
 
 $yamada = new Student('999','山田');
 
-  $yamada -> attend('PHP');
+  $yamada->attend('PHP');
 
 ?>
 
@@ -180,9 +180,8 @@ $yamada = new Student('999','山田');
 <?php
 
 $time = new DateTime();
-$time -> modify('-1 month');
 
-    echo $time -> format('Y-m-d');
+    echo $time->modify('-1 month')->format('Y-m-d');
 
 ?>
 
@@ -194,8 +193,6 @@ $today = new DateTime();
 
 $day = new DateTime('1992-04-25');
 
-$diff = $day -> diff($today);
-
-echo 'あの日から' . $diff -> format('%a') . '日経過しました。';
+echo 'あの日から' . $day->diff($today)->format('%a') . '日経過しました。';
 
 ?>
